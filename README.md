@@ -125,21 +125,6 @@ Manage platform configuration and export data.
 3.  Right click `index.html`
 4.  Select **Open with Live Server**
 
-------------------------------------------------------------------------
-
-## Option 2 --- Python Local Server
-
-Run:
-
-python -m http.server 5500
-
-Then open:
-
-User site\
-http://localhost:5500
-
-Admin dashboard\
-http://localhost:5500/admin/index.html
 
 ------------------------------------------------------------------------
 
