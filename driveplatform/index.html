@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DriveNow Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">DriveNow<span>Rentals</span></div>
+      <nav class="menu">
+        <a href="#fleet">Fleet</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-sm" href="#book">Book</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge">Fast pickup • Transparent pricing • 24/7 support</p>
+          <h1>Rent a car in minutes — drive with confidence.</h1>
+          <p class="sub">
+            Modern fleet, clear terms, and flexible pickup. Book online and get on the road today.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#book">Check availability</a>
+            <a class="btn btn-ghost" href="#fleet">View fleet</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">150+</div>
+              <div class="stat-label">Cars available</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">4.8★</div>
+              <div class="stat-label">Average rating</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">0€</div>
+              <div class="stat-label">Hidden fees</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" id="book">
+          <h2>Quick booking</h2>
+          <form id="bookingForm" class="form">
+            <label>
+              Pickup location
+              <input required name="location" placeholder="e.g., Thessaloniki Airport" />
+            </label>
+
+            <div class="row">
+              <label>
+                Pickup date
+                <input required type="date" name="pickupDate" />
+              </label>
+              <label>
+                Return date
+                <input required type="date" name="returnDate" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label>
+                Car type
+                <select name="carType">
+                  <option value="Economy">Economy</option>
+                  <option value="Compact">Compact</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Luxury">Luxury</option>
+                </select>
+              </label>
+              <label>
+                Drivers
+                <select name="drivers">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3+</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="btn btn-full" type="submit">Get quote</button>
+            <p class="mini" id="quoteOutput" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fleet">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured fleet</h2>
+          <p>Pick the right car for your trip — city, road trip, or business.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-top">
+              <div class="pill">Economy</div>
+              <div class="price">from <b>€29</b>/day</div>
+            </div>
+            <h3>City Compact</h3>
+            <ul>
+              <li>Automatic / Manual</li>
+              <li>Low fuel consumption</li>
+              <li>Perfect for city driving</li>
+            </ul>
+            <a class="btn btn-ghost btn-full" href="#book">Book</a>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <div class="pill">SUV</div>
+              <div class="price">from <b>€49</b>/day</div>
+            </div>
+            <h3>Family SUV</h3>
+            <ul>
+              <li>Spacious interior</li>
+              <li>Extra luggage capacity</li>
+              <li>Comfort for long trips</li>
+            </ul>
+            <a class="btn btn-ghost btn-full" href="#book">Book</a>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <div class="pill">Luxury</div>
+              <div class="price">from <b>€89</b>/day</div>
+            </div>
+            <h3>Executive Class</h3>
+            <ul>
+              <li>Premium comfort</li>
+              <li>Best-in-class safety</li>
+              <li>Business-ready</li>
+            </ul>
+            <a class="btn btn-ghost btn-full" href="#book">Book</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <h2>Simple pricing</h2>
+          <p>Clear tiers with insurance options. No surprises at checkout.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Basic</h3>
+            <p class="muted">For short trips</p>
+            <div class="big">€29/day</div>
+            <ul>
+              <li>Standard insurance</li>
+              <li>200km/day</li>
+              <li>Email support</li>
+            </ul>
+          </article>
+
+          <article class="card featured">
+            <h3>Plus</h3>
+            <p class="muted">Best value</p>
+            <div class="big">€45/day</div>
+            <ul>
+              <li>Extended insurance</li>
+              <li>Unlimited km</li>
+              <li>Priority support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Premium</h3>
+            <p class="muted">Business & luxury</p>
+            <div class="big">€79/day</div>
+            <ul>
+              <li>Full coverage</li>
+              <li>Unlimited km</li>
+              <li>24/7 phone support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Quick answers before you book.</p>
+        </div>
+
+        <div class="faq">
+          <details open>
+            <summary>What do I need to rent a car?</summary>
+            <p>A valid driver’s license, an ID/passport, and a payment card for the deposit.</p>
+          </details>
+          <details>
+            <summary>Can I cancel my booking?</summary>
+            <p>Yes — free cancellation up to 24 hours before pickup.</p>
+          </details>
+          <details>
+            <summary>Is insurance included?</summary>
+            <p>Basic insurance is included. You can upgrade during booking.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div>
+        <div class="brand">DriveNow<span>Rentals</span></div>
+        <p class="muted">Demo landing page project for portfolio.</p>
+      </div>
+      <div class="muted">© <span id="year"></span> DriveNow Rentals</div>
+    </div>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
